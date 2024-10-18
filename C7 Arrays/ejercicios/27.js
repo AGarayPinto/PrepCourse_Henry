@@ -3,7 +3,7 @@ function dePalabrasAFrase(palabras) {
   // Retorna un string donde todas las palabras estén concatenadas,
   // con un espacio entre cada palabra.
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
-  // Tu código:
+  return palabras.join(' ');
 }
 
 module.exports = dePalabrasAFrase;

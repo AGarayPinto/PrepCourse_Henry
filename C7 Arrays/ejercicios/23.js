@@ -1,8 +1,15 @@
-function breakStatement(num) {
-  // Iterar en un bucle aumentando en 2 el número num recibido hasta un límite de 10 veces.
-  // Guardar cada nuevo valor en un arreglo y retórnarlo.
-  // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse la ejecución y retornar el string: "Se interrumpió la ejecución".
-  // Tu código:
+function mesesDelAño(array) {
+  // El array contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
+  // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
+  // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
+  const mesesPedidos = ["Enero", "Marzo", "Noviembre"];
+  const resultado = [];
+  for (let mes of array) {
+    if (mesesPedidos.includes(mes)) {
+      resultado.push(mes);
+    }
+  }
+  return resultado.length === mesesPedidos.length ? resultado : "No se encontraron los meses pedidos";
 }
 
-module.exports = breakStatement;
+module.exports = mesesDelAño;
